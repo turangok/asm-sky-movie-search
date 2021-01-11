@@ -24,7 +24,7 @@ export const Person = ({ tvCredits, movieCredits, details }) => {
         <StyledPerson data-testid="PersonId">
             <StyledImage
                 alt={details?.name}
-                src={details?.profile_path && `${process.env.REACT_APP_IMAGE_API_URL}w500${details?.profile_path}?api_key=${process.env.REACT_APP_THE_MOVIE_DB_API_KEY}`}
+                src={details?.profile_path ? `${process.env.REACT_APP_IMAGE_API_URL}w500${details?.profile_path}?api_key=${process.env.REACT_APP_THE_MOVIE_DB_API_KEY}` : 'images/Not-available2.png'}
             />
             <StyledBody>
 
@@ -41,7 +41,7 @@ export const Person = ({ tvCredits, movieCredits, details }) => {
                 <StyledTitle> MOVIE CREDITS  </StyledTitle>
                 <StyledCast>
                     {movieCredits?.map((item) => {
-                        return <StyledCastItem key={item.id} onClick={() => handleGoToPerson(item.id, 'tv')}>
+                        return <StyledCastItem key={item.id} onClick={() => handleGoToPerson(item.id, 'movie')}>
                             {item.title}
                         </StyledCastItem>
                     })}

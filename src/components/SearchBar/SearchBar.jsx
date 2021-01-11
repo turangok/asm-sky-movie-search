@@ -74,6 +74,10 @@ export const SearchBar = () => {
     history.push(`/`);
   };
 
+  const onSetSearchValue = (value) => {
+    setSearchValue(value);
+  };
+
   return (
     <StyledForm onSubmit={onSubmit} data-testid="searchBarId">
       <StyledHeader> Movie Search </StyledHeader>
@@ -99,7 +103,7 @@ export const SearchBar = () => {
             <SearchKeywords
               isShow={isShow}
               options={options}
-              onSubmit={onSubmit}
+              onSubmit={onSetSearchValue}
               setIsShow={setIsShow}
             />
           )}

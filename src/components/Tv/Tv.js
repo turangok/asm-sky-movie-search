@@ -23,7 +23,7 @@ export const Tv = ({ type, cast, details }) => {
         <StyledTv data-testid="TvId">
             <StyledImage
                 alt={details?.name}
-                src={details?.poster_path && `${process.env.REACT_APP_IMAGE_API_URL}w500${details?.poster_path}?api_key=${process.env.REACT_APP_THE_MOVIE_DB_API_KEY}`}
+                src={details?.poster_path ? `${process.env.REACT_APP_IMAGE_API_URL}w500${details?.poster_path}?api_key=${process.env.REACT_APP_THE_MOVIE_DB_API_KEY}` : 'images/Not-available2.png'}
             />
             <StyledBody>
 
