@@ -20,7 +20,7 @@ const searchReducer = (state = initialState, action) =>
                 draft.searchResults = action.payload
                 break;
             case ACTION_TYPES.SET_SEARCH_KEYWORDS:
-                draft.searchKeywords = action.payload?.results?.map((item) => item.media_type === 'movie' ? { label: item.title, value: item.title } : { label: item.name, value: item.name })
+                draft.searchKeywords = action.payload?.results?.map((item) => item.title ? { label: item.title, value: item.title } : { label: item.name, value: item.name })
                 break;
             default:
                 break;

@@ -17,6 +17,7 @@ export default function SeachKeywords({
 
   return (
     <StyledKeywords ref={ref} isShow={isShow}>
+      {console.log({ options })}
       {options.map((option, i) => (
         <div
           key={i}

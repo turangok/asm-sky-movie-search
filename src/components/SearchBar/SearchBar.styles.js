@@ -41,7 +41,7 @@ export const StyledError = styled.span`
 
 export const StyledKeywords = styled.div`
   position: absolute;
-  z-index: 1;
+  z-index: auto;
   background: ${(p) => p.theme.white};
   padding: 0.31rem;
   min-width: 12.5rem;
