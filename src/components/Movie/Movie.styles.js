@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const StyledMovie = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr;
-  background: gray;
-  color: white;
+  background: ${(p) => p.theme.lightGrey};
+  color: ${(p) => p.theme.white};
 `;
 
 export const StyledImage = styled.img`
@@ -32,13 +32,14 @@ export const StyledItemDescription = styled.div`
 export const StyledCast = styled.div`
   display: flex;
   flex-wrap: wrap;
-  color: blue;
+  color: ${(p) => p.theme.royalBlue};
   font-size: 0.69rem;
   margin-top: 0.38rem;
 `;
 
 export const StyledCastItem = styled.div`
   width: 12.5rem;
+  font-size : 14px;
   &:hover {
     cursor: pointer;
     box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2), 0 0.38rem 1.25rem 0 rgba(0, 0, 0, 0.19);

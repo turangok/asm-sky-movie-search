@@ -25,7 +25,7 @@ export const StyledSearchCard = styled.div`
 export const StyledBody = styled.div`
   flex-grow: 2;
   margin-left: 1rem;
-  color: #3d3b49;
+  color:${(p) => p.theme.doveGray};
 `;
 
 export const StyledItemName = styled.div` 
@@ -34,7 +34,7 @@ export const StyledItemName = styled.div`
 
 export const StyledItemDescription = styled.div`
   display: block;
-  color: #8b889a;
+  color: #${(p) => p.theme.doveGray};
   font-size: 0.75rem;
   margin-top: 0.38rem;
 

@@ -4,8 +4,8 @@ import styled from "styled-components";
 export const StyledPerson = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr; 
-  background: gray; 
-  color: white; 
+  background: ${(p) => p.theme.lightGrey}; 
+  color: ${(p) => p.theme.white}; 
 `;
 
 export const StyledImage = styled.img`
@@ -33,7 +33,7 @@ export const StyledItemDescription = styled.div`
 export const StyledCast = styled.div`
 display : flex;
 flex-wrap :  wrap; 
-  color: blue;
+  color: ${(p) => p.theme.royalBlue};
   font-size: 0.69rem;
   margin-top: 0.38rem;
   
