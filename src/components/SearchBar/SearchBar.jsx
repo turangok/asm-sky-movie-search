@@ -28,7 +28,6 @@ export const SearchBar = () => {
   const options = useSelector((state) => {
     return state?.searchResults?.searchKeywords;
   });
-  console.log('​options-01 -> options', options);
 
   const handleOnChange = (e) => {
     setSearchValue(e.target.value);
